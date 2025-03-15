@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
+<h1 class="blog-title">
   {{ section.title }}
 </h1>
 
@@ -18,7 +18,7 @@
 <ul class="blog-list">
   {% for year in years %}
   <li>
-    <h2>{{ year }}</h2>
+    <h3>{{ year }}</h3>
     <ul>
       {% for page in pages_by_date %}
       {% if page.date | date(format="%Y") == year %}
