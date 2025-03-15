@@ -8,14 +8,6 @@
 {% set pages_by_date = section.pages | sort(attribute="date") | reverse %}
 {% set years = [] %}
 
-<!-- Debug output -->
-{# <div style="color: red;">
-  Number of pages: {{ section.pages | length }}<br>
-  {% for page in pages_by_date %}
-  Page date: {{ page.date }} - Year: {{ page.date | date(format="%Y") }}<br>
-  {% endfor %}
-</div> #}
-
 {% for page in pages_by_date %}
 {% set year = page.date | date(format="%Y") %}
 {% if year not in years %}
@@ -23,12 +15,7 @@
 {% endif %}
 {% endfor %}
 
-<!-- Debug years array -->
-{# <div style="color: red;">
-  Years found: {{ years | join(sep=", ") }}
-</div> #}
-
-<ul>
+<ul class="blog-list">
   {% for year in years %}
   <li>
     <h2>{{ year }}</h2>

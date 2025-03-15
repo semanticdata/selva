@@ -14,17 +14,18 @@
 
 <body>
   <header>
-    <h1>Selva</h1>
-
-    <nav>
-      <a href="{{ get_url(path='/') | safe }}">Home</a>
-      <a href="{{ get_url(path='/blog') | safe }}">Blog</a>
-    </nav>
+    <div class="container">
+      <h1>Selva</h1>
+      <nav>
+        <a href="{{ get_url(path='/') | safe }}">Home</a>
+        <a href="{{ get_url(path='/blog') | safe }}">Blog</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="section">
+  <main>
     {% block content %} {% endblock %}
-  </section>
+  </main>
 </body>
 
 </html>

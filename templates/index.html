@@ -1,10 +1,8 @@
 {% extends "base.html" %} {% block content %}
-<h1 class="title">This is my blog made with Zola.</h1>
+<h2 class="title">This is my blog made with Zola.</h2>
 
 <p>Welcome to my blog! This is a simple blog made with Zola.</p>
 <p>It is a static site generator written in Rust.</p>
 <p>It is fast, simple, and easy to use.</p>
 <p>It is also very customizable.</p>
-
-<p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
 {% endblock content %}
