@@ -17,8 +17,11 @@
     <div class="container">
       <h1>Selva</h1>
       <nav>
-        <a href="{{ get_url(path='/') | safe }}">Home</a>
-        <a href="{{ get_url(path='/blog') | safe }}">Blog</a>
+        {% if config.extra.menu %}
+        {% for menu in config.extra.menu %}
+        <a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a>
+        {% endfor %}
+        {% endif %}
       </nav>
     </div>
   </header>

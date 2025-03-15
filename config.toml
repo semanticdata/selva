@@ -12,5 +12,10 @@ default_language = "en"
 highlight_code = true
 # highlight_theme = "base16-ocean-dark"
 
-[extra]
-# Put all your custom variables here
+[[extra.menu]]
+name = "Home"
+url = "/"
+
+[[extra.menu]]
+name = "Blog"
+url = "/blog"
