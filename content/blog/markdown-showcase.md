@@ -1,5 +1,5 @@
 ---
-title: Markdown Showcase
+title: "Markdown Showcase"
 description: "This is intended as a quick reference and showcase of Markdown's synthax. Lorem markdownum auras canities nostros caede Nilus est sacer atque Telephon totoque. Modo dedit facies et se muneris egesto."
 date: 2024-06-06
 # taxonomies:

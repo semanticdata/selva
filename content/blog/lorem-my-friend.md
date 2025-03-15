@@ -1,5 +1,5 @@
 ---
-title: Lorem My Friend
+title: "Lorem My Friend"
 description: "Velit ad culpa laborum sit eiusmod ullamco est culpa proident enim excepteur quis commodo incididunt. Qui quis aliquip enim sit elit laborum dolore qui Lorem anim ipsum anim pariatur. Veniam adipisicing nisi eiusmod cillum. Esse pariatur quis ut ex nostrud voluptate veniam culpa esse veniam."
 date: 2023-04-15
 # taxonomies:
