@@ -3,12 +3,34 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  // background-color: #000;
+  // color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.container {
-  max-width: 1200px;
+header {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  nav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  a {
+    // color: #fff;
+    text-decoration: none;
+  }
+}
+
+.section {
   margin: 0 auto;
   padding: 0 20px;
 }
