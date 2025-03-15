@@ -1,10 +1,16 @@
 base_url = "https://semanticdata.github.io/selva/"
+title = "Selva"
+description = "Selva is a simple blog theme built with Zola."
 compile_sass = true
 build_search_index = false
 generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
+default_language = "en"
 
 [markdown]
+# For a full theme list: https://www.getzola.org/documentation/getting-started/configuration/#syntax-highlighting
 highlight_code = true
+# highlight_theme = "base16-ocean-dark"
 
 [extra]
 # Put all your custom variables here

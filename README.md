@@ -1,6 +1,6 @@
 # Selva - Zola Blog
 
-This is a simple blog made with Zola.
+This is a simple blog made with Zola, focusing on clean design and readability.
 
 ## Features
 
@@ -9,23 +9,28 @@ This is a simple blog made with Zola.
 - [ ] Tags
 - [ ] Categories
 
+## Prerequisites
+
+- [Zola](https://www.getzola.org/documentation/getting-started/installation/) installed on your system
+- Basic knowledge of markdown and TOML
+- Git (optional, for version control)
+
 ## Quick Start
 
 1. Clone the repository
 
 ```bash
 git clone https://github.com/semanticdata/selva.git
+cd selva
 ```
 
-2. Install Zola on your system
-
-3. Run the development server
+2. Start the development server
 
 ```bash
 zola serve
 ```
 
-For more detailed instructions, visit the [documentation](https://www.getzola.org/documentation/themes/installing-and-using-themes/) page about installing and using themes.
+The site will be available at `http://127.0.0.1:1111`.
 
 ## License
 
