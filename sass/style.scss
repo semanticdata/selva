@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  // background-color: #000;
-  // color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
   max-width: 1000px;
   margin: 0 auto;
+  // background-color: #000;
+  // color: #fff;
 }
 
 header {
@@ -23,14 +27,13 @@ header {
     display: flex;
     gap: 20px;
   }
-
-  a {
-    // color: #fff;
-    text-decoration: none;
-  }
 }
 
 .section {
   margin: 0 auto;
   padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
 }
