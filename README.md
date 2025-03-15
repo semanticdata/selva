@@ -8,6 +8,7 @@ This is a simple blog made with Zola, focusing on clean design and readability.
 - [ ] Pagination
 - [ ] Tags
 - [ ] Categories
+- [ ] Table of Contents
 
 ## Prerequisites
 

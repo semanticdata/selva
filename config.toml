@@ -13,7 +13,7 @@ highlight_code = true
 # highlight_theme = "base16-ocean-dark"
 
 [extra]
-table_of_contents = true
+table_of_contents = false
 
 [[extra.menu]]
 name = "Home"
