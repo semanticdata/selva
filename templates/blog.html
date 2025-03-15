@@ -18,7 +18,7 @@
 <ul class="blog-list">
   {% for year in years %}
   <li>
-    <h3>{{ year }}</h3>
+    <h2>{{ year }}</h2>
     <ul>
       {% for page in pages_by_date %}
       {% if page.date | date(format="%Y") == year %}
