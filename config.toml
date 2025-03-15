@@ -12,6 +12,9 @@ default_language = "en"
 highlight_code = true
 # highlight_theme = "base16-ocean-dark"
 
+[extra]
+table_of_contents = true
+
 [[extra.menu]]
 name = "Home"
 url = "/"
