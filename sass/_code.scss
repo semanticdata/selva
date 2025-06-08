@@ -5,7 +5,7 @@ pre {
 
 /* The line numbers already provide some kind of left/right padding */
 pre[data-linenos] {
-  // padding: 0.25rem 0;
+  // padding: 0.5rem 0;
   padding: 0;
 }
 
@@ -31,4 +31,20 @@ pre mark {
 pre table {
   width: 100%;
   border-collapse: collapse;
+}
+
+pre {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: -0.5rem;
+    // width: 100%;
+    height: 100%;
+    // background-color: green;
+    z-index: -2;
+  }
 }
