@@ -10,16 +10,32 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="rss" type="application/rss+xml" href="{{ get_url(path='/rss.xml') | safe }}" title="Selva" />
   <link rel="alternate" type="application/atom+xml" href="{{ get_url(path='/atom.xml') | safe }}" title="Selva" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.querySelector('.menu-button');
+      const nav = document.querySelector('nav');
+      
+      menuButton.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        menuButton.setAttribute('aria-expanded', 
+          menuButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+      });
+    });
+  </script>
 </head>
 
 <body>
   <header>
     <div class="container">
       <h1>Selva</h1>
-      <nav>
+      <button class="menu-button" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav">
         {% if config.extra.menu %}
         {% for menu in config.extra.menu %}
-        <a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a>
+        <a href="{{ get_url(path=menu.url) | safe }}" class="nav-link">{{ menu.name }}</a>
         {% endfor %}
         {% endif %}
       </nav>

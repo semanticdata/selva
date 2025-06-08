@@ -19,18 +19,99 @@ body {
   min-height: 100vh;
 }
 
+// Variables
+$breakpoint-md: 768px;
+$hamburger-size: 24px;
+$hamburger-thickness: 2px;
+
 header {
   border-bottom: 1px solid #000;
+  position: relative;
+  padding: 1rem 0;
+
+  .container {
+    justify-content: space-between;
+  }
 
   h1 {
     font-size: var(--step-1);
-    margin: 0.5rem 0;
+    margin: 0;
+  }
+
+  .menu-button {
+    display: none; // Hidden by default on desktop
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 100;
+
+    .hamburger {
+      display: block;
+      width: $hamburger-size;
+      height: $hamburger-thickness * 5;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: $hamburger-thickness;
+        background: currentColor;
+        transition: transform 0.3s ease;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+
+    &[aria-expanded="true"] .hamburger::before {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &[aria-expanded="true"] .hamburger::after {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
   }
 
   nav {
-    margin-left: auto;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+
+    @media (max-width: $breakpoint-md) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 80%;
+      max-width: 300px;
+      background: white;
+      flex-direction: column;
+      padding: 5rem 2rem 2rem;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 99;
+
+      &.active {
+        right: 0;
+      }
+
+      .nav-link {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+      }
+    }
   }
 }
 
